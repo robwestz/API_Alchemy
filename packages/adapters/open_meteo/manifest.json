@@ -1,0 +1,11 @@
+{
+  "name": "open_meteo",
+  "version": "1.0.0",
+  "schema_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "doc_url": "https://open-meteo.com/en/docs",
+  "generated_at": "2026-04-30T21:00:00Z",
+  "model_used": "manual",
+  "prompts_used": [],
+  "secrets_required": [],
+  "status": "active"
+}
