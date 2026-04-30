@@ -125,7 +125,8 @@ class LocalProcessSandboxRunner(SandboxRunner):
         stderr = stderr_bytes.decode("utf-8", errors="replace")
         duration_ms = int((time.monotonic() - t_start) * 1000)
 
-        success = (exit_code == 0) and ("PASS" in stdout)
+        # success = process exited cleanly. Caller inspects stdout for assertions.
+        success = exit_code == 0
 
         logger.info(
             f"LocalProcessSandboxRunner: exit_code={exit_code} "

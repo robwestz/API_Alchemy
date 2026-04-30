@@ -86,14 +86,18 @@ def test_sandbox_result_schema_pass() -> None:
 
 
 def test_sandbox_result_schema_rejects_bad_types() -> None:
-    """Pydantic ska reject:a icke-bool 'success'."""
+    """Pydantic ska reject:a icke-coercebar input.
+
+    OBS: Pydantic v2 coerce:ar 'yes' -> True, sa vi anvander en
+    string som inte kan bli int (duration_ms).
+    """
     with pytest.raises(Exception):  # noqa: BLE001
         SandboxResult(  # type: ignore[arg-type]
-            success="yes",  # type: ignore[arg-type]
+            success=True,
             stdout="",
             stderr="",
             exit_code=0,
-            duration_ms=0,
+            duration_ms="not_a_number",  # type: ignore[arg-type]
         )
 
 
