@@ -1,0 +1,44 @@
+# Harness (build-time, not product)
+.agents/
+.claude/
+.codex/
+.omc/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+.env
+.env.*
+!.env.example
+
+# Node
+node_modules/
+dist/
+.next/
+*.log
+
+# Secrets
+secrets.toml
+*.key
+*.pem
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Sandbox / generated adapters audit
+adapters/_generated/
+.sandbox-cache/
+
+# Test artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+playwright-report/
+test-results/
