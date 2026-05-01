@@ -3,7 +3,7 @@ import type { Config } from "tailwindcss";
 // Tailwind v4 config — CSS variables defined in app/globals.css
 // Content scan covers app/ and components/ per Fas 6a scope
 const config: Config = {
-  darkMode: ["class"],
+  darkMode: "class",
   content: [
     "./app/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",

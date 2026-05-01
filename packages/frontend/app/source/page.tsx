@@ -13,6 +13,10 @@
 
 import { listTools } from "@/lib/api-client";
 import { ToolButton } from "@/components/ToolButton";
+
+// Force dynamic rendering — page fetches tools from backend at request time
+export const dynamic = "force-dynamic";
+
 import { SourceIngestForm } from "@/app/source/SourceIngestForm";
 import type { ToolSpec } from "@/lib/types";
 

@@ -13,6 +13,10 @@
  */
 
 import Link from "next/link";
+
+// Force dynamic rendering — page fetches from backend at request time, not build time
+export const dynamic = "force-dynamic";
+
 import {
   CheckCircle,
   XCircle,
