@@ -42,3 +42,12 @@ adapters/_generated/
 htmlcov/
 playwright-report/
 test-results/
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Ruff cache
+.ruff_cache/
+
+# Tasks workspace (local-only premium-task drafts)
+tasks/
