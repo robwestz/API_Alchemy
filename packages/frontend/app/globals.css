@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+/*
+ * API Alchemy Engine — design tokens (dark mode default, no light toggle in Fas 6a)
+ * Palette: zinc-950 bg, emerald-400 primary (data flow), violet-400 accent (AI)
+ * shadcn/ui pattern: CSS variables consumed by tailwind.config.ts theme extensions
+ */
+
+@layer base {
+  :root {
+    --background: 240 6% 6%;
+    --foreground: 240 5% 96%;
+
+    --card: 240 5% 9%;
+    --card-foreground: 240 5% 96%;
+
+    --border: 240 4% 16%;
+    --input: 240 4% 16%;
+
+    --primary: 152 76% 60%;
+    --primary-foreground: 240 6% 6%;
+
+    --secondary: 240 4% 16%;
+    --secondary-foreground: 240 5% 96%;
+
+    --muted: 240 4% 12%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 263 70% 65%;
+    --accent-foreground: 240 5% 96%;
+
+    --destructive: 0 73% 60%;
+
+    --ring: 152 76% 60%;
+
+    --radius: 0.5rem;
+  }
+
+  /* Force dark — no light toggle in Fas 6a (scheduled for 6b) */
+  html {
+    color-scheme: dark;
+  }
+
+  * {
+    border-color: hsl(var(--border));
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-size: 0.875rem; /* 14px — power-tool default */
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Scrollbar styling — thin, dark */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground));
+  }
+}
